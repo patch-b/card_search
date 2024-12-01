@@ -20,8 +20,8 @@
 <body>
   <header>
     <h1>ポケポケ カード検索</h1>
-    <input type="text" id="searchInput" placeholder="名前やテキスト">
-    <select id="searchHPMin">
+    <input type="text" id="searchInput" placeholder="名前やテキスト" onChange="searchBooks()">
+    <select id="searchHPMin" onChange="searchBooks()">
       <option value="">HP下限</option>
       <option value=30>30</option>
       <option value=40>40</option>
@@ -42,8 +42,32 @@
       <option value=190>190</option>
       <option value=200>200</option>
     </select>
-    <select id="searchHPMax">
+    <select id="searchHPMax" onChange="searchBooks()">
       <option value="">HP上限</option>
+      <option value=30>30</option>
+      <option value=40>40</option>
+      <option value=50>50</option>
+      <option value=60>60</option>
+      <option value=70>70</option>
+      <option value=80>80</option>
+      <option value=90>90</option>
+      <option value=100>100</option>
+      <option value=110>110</option>
+      <option value=120>120</option>
+      <option value=130>130</option>
+      <option value=140>140</option>
+      <option value=150>150</option>
+      <option value=160>160</option>
+      <option value=170>170</option>
+      <option value=180>180</option>
+      <option value=190>190</option>
+      <option value=200>200</option>
+    </select>
+    <select id="searchDamage" onChange="searchBooks()">
+      <option value="">ダメージ</option>
+      <option value=0>0</option>
+      <option value=10>10</option>
+      <option value=20>20</option>
       <option value=30>30</option>
       <option value=40>40</option>
       <option value=50>50</option>
@@ -111,7 +135,7 @@
       <option value=190>190</option>
       <option value=200>200</option>
     </select> -->
-    <select id="searchType">
+    <select id="searchType" onChange="searchBooks()">
       <option value="">タイプ</option>
       <option value="草">草</option>
       <option value="炎">炎</option>
@@ -124,13 +148,18 @@
       <option value="竜">竜</option>
       <option value="無">無</option>
     </select>
-    <select id="searchEvo">
+    <select id="searchEvo" onChange="searchBooks()">
       <option value="">進化</option>
       <option value="たね">たね</option>
       <option value="1進化">1進化</option>
       <option value="2進化">2進化</option>
     </select>
-    <select id="searchWeakness">
+    <select id="searchAbiFlg" onChange="searchBooks()">
+      <option value="">特性</option>
+      <option value=1>特性あり</option>
+      <option value=0>特性なし</option>
+    </select>
+    <select id="searchWeakness" onChange="searchBooks()">
       <option value="">弱点</option>
       <option value="草">草</option>
       <option value="炎">炎</option>
@@ -143,7 +172,7 @@
       <option value="竜">竜</option>
       <option value="無">無</option>
     </select>
-    <select id="searchRetreat">
+    <select id="searchRetreat" onChange="searchBooks()">
       <option value="">にげる</option>
       <option value=0>0</option>
       <option value=1>1</option>
@@ -151,14 +180,14 @@
       <option value=3>3</option>
       <option value=4>4</option>
     </select>
-    <select id="searchRarity">
+    <select id="searchRarity" onChange="searchBooks()">
       <option value="">レアリティ</option>
       <option value="♦">♦</option>
       <option value="♦♦">♦♦</option>
       <option value="♦♦♦">♦♦♦</option>
       <option value="♦♦♦♦">♦♦♦♦</option>
     </select>
-    <button onclick="searchBooks()">検索</button>
+    <!-- <button onclick="searchBooks()">検索</button> -->
   </header>
   <main>
     <span id="results">
